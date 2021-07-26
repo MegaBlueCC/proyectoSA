@@ -1,0 +1,72 @@
+/*comentario*/
+@media only screen and (max-width: 640px) {
+  /* mobile */
+  header nav div {
+    color: black; } }
+
+/*5HISTORIA*/
+.mainHistoria {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center; }
+  .mainHistoria .mainHistoria__divUno {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: "h2 img" "p img" "p img"; }
+    .mainHistoria .mainHistoria__divUno h2 {
+      grid-area: h2; }
+    .mainHistoria .mainHistoria__divUno p {
+      grid-area: p;
+      margin: 5px; }
+      .mainHistoria .mainHistoria__divUno p strong {
+        background-color: grey; }
+    .mainHistoria .mainHistoria__divUno img {
+      grid-area: img;
+      border: solid 1px black; }
+  .mainHistoria .mainHistoria__divDos {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: "img h2" "img p" "img p"; }
+    .mainHistoria .mainHistoria__divDos h2 {
+      grid-area: h2;
+      margin: 5px;
+      padding: 10px; }
+    .mainHistoria .mainHistoria__divDos p {
+      grid-area: p;
+      margin: 5px;
+      padding: 10px; }
+      .mainHistoria .mainHistoria__divDos p strong {
+        background-color: grey; }
+    .mainHistoria .mainHistoria__divDos img {
+      grid-area: img;
+      border: solid 1px black; }
+  .mainHistoria .mainHistoria__divTres {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: "ver h2 h2" "ver p img"; }
+    .mainHistoria .mainHistoria__divTres h2 {
+      grid-area: ver;
+      transform: rotate(90deg);
+      border: solid 1px black;
+      padding: 5px;
+      background-color: grey; }
+    .mainHistoria .mainHistoria__divTres .mainHistoria__divTres--Uno {
+      grid-area: h2;
+      width: 360px; }
+    .mainHistoria .mainHistoria__divTres .mainHistoria__divTres--Dos {
+      grid-area: p;
+      margin: 5px;
+      width: 180px; }
+      .mainHistoria .mainHistoria__divTres .mainHistoria__divTres--Dos strong {
+        background-color: grey; }
+    .mainHistoria .mainHistoria__divTres .mainHistoria__divTres--Tres {
+      grid-area: img;
+      border: solid 1px black; }

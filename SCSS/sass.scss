@@ -1,0 +1,132 @@
+/*comentario*/ 
+@media only screen and (max-width:640px){
+    /* mobile */
+    header{
+        nav{
+            div{
+                color: black;
+            }
+        }
+    }
+
+
+    }
+$strongcolor: grey;
+$anchoMobile: 360px;
+
+
+
+/*5HISTORIA*/ 
+.mainHistoria{
+    // display: flex;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    // flex-direction: column;
+        .mainHistoria__divUno{
+            display: grid;
+            // justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr;
+            grid-template-areas: 
+            "h2 img"
+            "p img"
+            "p img"
+            ;
+            h2{
+                grid-area: h2;
+            }
+            p{
+                grid-area: p;
+                margin: 5px;
+                strong{
+                    background-color: $strongcolor;
+            }
+            }
+            img{
+                grid-area: img;
+                border: solid 1px black;
+                
+            }
+            
+           
+        }
+        .mainHistoria__divDos{
+            display: grid;
+            // justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr;
+            grid-template-areas: 
+            "img h2"
+            "img p"
+            "img p"
+            ;
+            h2{
+                grid-area: h2;
+                margin: 5px;
+                padding: 10px;
+            }
+            p{
+                grid-area: p;
+                margin: 5px;
+                padding: 10px;
+                strong{
+                    background-color: $strongcolor;
+            }
+            }
+            img{
+                grid-area: img;
+                border: solid 1px black;
+                
+            }
+            
+           
+        }
+        .mainHistoria__divTres{
+            display: grid;
+            // position: absolute;
+            // justify-content: center;
+            align-items: center;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr;
+            grid-template-areas: 
+            "ver h2 h2"
+            "ver p img"
+            
+            ;
+            h2{
+                grid-area: ver;
+                transform: rotate(90deg);
+                border: solid 1px black;
+                padding: 5px;
+                background-color: $strongcolor;
+            }
+            .mainHistoria__divTres--Uno{
+                grid-area: h2;
+                width: $anchoMobile;
+            }
+            .mainHistoria__divTres--Dos{
+                grid-area: p;
+                margin: 5px;
+                width: $anchoMobile/2;
+                strong{
+                    background-color: $strongcolor;
+            }
+            }
+            .mainHistoria__divTres--Tres{
+                grid-area: img;
+                border: solid 1px black;
+                
+            }
+            
+           
+        }
+
+}
+@for $var from start to end {
+    
+}

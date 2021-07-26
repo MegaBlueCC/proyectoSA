@@ -1,0 +1,563 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*font-style: normal;
+    font-weight: normal;*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+    body{
+        position: relative;
+        min-height: 100vh;
+    }
+    /*HEADER*/
+    header{
+        width: 100%;
+        height: 65px;
+        /* background-color: #F2F0E4; */
+        /* background-color: #A61F2B; */
+        /*activa flexbox*/
+        display: flex; 
+        flex-flow: row nowrap; /*el flex-flow es direction y wrap juntos*/
+        justify-content: space-evenly;
+        
+    }
+    .menuNavegableSup__logo{ /*Loguito*/
+        width: 2px;
+        height: 2px;
+        display: flex;   
+        flex-flow: row nowrap;
+    }
+    .menuNavegableSup__logo a img{
+        width: 80px;
+        height: 80px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-right: 0px;
+        margin-left: 0px;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    #menuNavegableSup{
+        width: 90%;
+        height: 60px;
+        margin: 2px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        background-color: #A61F2B;
+        position: fixed;
+        border: solid 2px white;
+    }
+    .header__nav{
+        width: 100%;
+        height: 65px;
+        float: right;
+            /*text-align: right;*/
+        padding: 5px;
+        margin: 10px 10px 0px 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
+    #item{ /*item del menú desplegable*/
+        float: left;
+        list-style: none;
+    }
+    #item a{/*link del ítem del menú desplegable*/
+        background-color: #D92534;
+        color: #F2F0E4;
+        padding: 3px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    #desple{
+        display: none;
+        list-style: none;
+        text-align: left;
+        position: absolute;
+        min-width: 200px;
+        }
+    #item a:hover{
+        background-color: #F22929;
+    }
+    #item:hover #desple{
+        display: block;
+    }
+
+    /*MAIN*/
+    main{
+        /* background-color: #F2F0E4; */
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+
+        /* para el footer */
+        padding-bottom: 2.5rem;
+    }
+    #main__inicio{
+        background-image:url("https://bn1304files.storage.live.com/y4m2W21fb9gMh2zRNfNJPCa0qJhFgXlnnkLn_Mxkmpn_vbdhOH6EGD0gFePspw_qaLDwC9ZfycK31Bset9X_aPWAcieJOk5uQxEiCfPImY--wJxGKQTlrQA1NKPBu03IH1tQWdd1MXAhsjq8fOzDasfuA5ROsGlFnsIf2fAD6ZLVbabn5WXQssrCvwq4sYwWbDy?width=1024&height=812&cropmode=none");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    .main__textoDeBienvenida{
+        text-align: justify;
+        background-color: #f2f0e48a;
+        font-size: 17px;
+        line-height: 1.5;
+        width: 600px;
+        height: 350px;
+        overflow: auto;
+        padding: 5px;
+        margin: 5px;
+        /* border: solid 2px black ; */
+        /*margin: 10px 300px 0px 300px;*/
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        transition: all 1s;
+        
+    }
+    .main__textoDeBienvenida:hover{
+        background-color: #00000075;
+        height: 400px;
+        width: 650px;
+        color: white;
+        border: none;
+        padding: 20px;
+        font-size: 18px;
+
+    }
+
+    .textoLeft{
+        text-align: left;
+    }
+    main #ali thead{
+        font-weight: bold;
+    }
+    .capa__tr--opciones{
+        list-style-type: upper-latin;
+        list-style-position: inside;
+        padding: 10px;
+    }
+/* GALERÍA */
+#main__galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main__galeria img{
+    border: solid 1px black;
+
+}
+
+
+/* UBICACIÓN */
+    .mapaDeGoogle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* position: absolute; */
+
+    }
+    .mapaMapaDeG{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+/* VISITAS */
+    .main__sectionP--calen{
+        width: 500px;
+        height: 300px;
+        border: solid 2px black;
+    }
+    .main__SBotonConsulta{
+        width: 300px;
+        height: 50px;
+        margin: 10px;
+        background-color: #D92534 ;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        transition: all;
+       
+    }
+    .main__SBotonConsulta:hover{
+        background-image: linear-gradient(to right,#D92534,#F22929);
+        justify-content: center;
+    }
+    .main__SBotonConsulta--txt{
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-style: italic;
+    }
+    .main__SBotonConsulta--txt:hover{
+        font-style: bold;
+
+    }
+    .main__section--act{
+        margin: 10px;
+        padding: 10px;
+        font-weight: lighter;
+    }
+
+
+    /*VENTAS GRIDS*/
+    .main__sectionGrilla{/*PADRE*/
+        display: grid;
+        /* grid-template-columns: 99vh;
+        grid-template-rows: repeat(3, 300px); */
+        grid-template-areas: 
+        "ali"
+        "ves"
+        "cap"
+        ;
+        grid-row-gap: 10px;
+        justify-content: stretch;
+        margin: 0px 50px 50px 50px ;
+    }
+    .main__sectionGrilla p{
+        padding: 10px;
+
+    }
+    /*ALIMENTOS*/
+    .main__sectionG--ali{
+        grid-area: ali;
+        border: solid 2px black;
+        background-color: #F2798F ;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo titulo"
+        "uno dos tres cuatro"
+        "cinco seis siete ocho"
+        "nueve diez once doce"
+        "trece catorce quince dieciseis"
+        "diecisiete dieciocho diecinueve veinte"
+        "veintiuno veintidos veintitres veinticuatro"
+        ;
+    }
+    .main__sectionG--ali:hover{
+        border: solid 2px red;
+    }
+
+    .m_s_aliTitulo{
+        grid-area: titulo;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 2rem;
+        background-color: #A61F2B;
+        color: white;
+    }
+    .m_s_ali_1{
+        grid-area: uno;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color: #C6D99C;
+    }
+    .m_s_ali_2{
+        grid-area: dos;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color: #C6D99C;
+    }
+    .m_s_ali_3{
+        grid-area: tres;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color: #C6D99C;
+    }
+    .m_s_ali_4{
+        grid-area: cuatro;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color: #C6D99C;
+    }
+    .m_s_ali_5{
+        grid-area: cinco;
+        border: solid 1px black;
+    }
+    .m_s_ali_6{
+        grid-area: seis;
+        border: solid 1px black;
+    }
+    .m_s_ali_7{
+        grid-area: siete;
+        border: solid 1px black;
+    }
+    .m_s_ali_8{
+        grid-area: ocho;
+        border: solid 1px black;
+    }
+    .m_s_ali_9{
+        grid-area: nueve;
+        border: solid 1px black;
+    }
+    .m_s_ali_10{
+        grid-area: diez;
+        border: solid 1px black;
+    }
+    .m_s_ali_11{
+        grid-area: once;
+        border: solid 1px black;
+    }
+    .m_s_ali_12{
+        grid-area: doce;
+        border: solid 1px black;
+    }
+    .m_s_ali_13{
+        grid-area: trece;
+        border: solid 1px black;
+    }
+    .m_s_ali_14{
+        grid-area: catorce;
+        border: solid 1px black;
+    }
+    .m_s_ali_15{
+        grid-area: quince;
+        border: solid 1px black;
+    }
+    .m_s_ali_16{
+        grid-area: dieciseis;
+        border: solid 1px black;
+    }
+    .m_s_ali_17{
+        grid-area: diecisiete;
+        border: solid 1px black;
+    }
+    .m_s_ali_18{
+        grid-area: dieciocho;
+        border: solid 1px black;
+    }
+    .m_s_ali_19{
+        grid-area: diecinueve;
+        border: solid 1px black;
+    }
+    .m_s_ali_20{
+        grid-area: veinte;
+        border: solid 1px black;
+    }
+    .m_s_ali_21{
+        grid-area: veintiuno;
+        border: solid 1px black;
+    }
+    .m_s_ali_22{
+        grid-area: veintidos;
+        border: solid 1px black;
+    }
+    .m_s_ali_23{
+        grid-area: veintitres;
+        border: solid 1px black;
+    }
+    .m_s_ali_24{
+        grid-area: veinticuatro;
+        border: solid 1px black;
+    }
+
+    /* VESTIMENTA */
+    .main__sectionG--ves{
+        grid-area: ves;
+        border: solid 2px black;
+        background-color: #F2798F ;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo titulo"
+        "uno dos tres cuatro"
+        "cinco seis siete ocho"
+        "nueve diez once doce"
+        "trece catorce quince dieciseis"
+        "diecisiete dieciocho diecinueve veinte"
+        "veintiuno veintidos veintitres veinticuatro"
+        ;
+    }
+    .main__sectionG--ves:hover{
+        border: solid 2px red;
+    }
+
+    /* CAPACITACIONES */
+    .main__sectionG--cap{
+        grid-area: cap;
+        border: solid 2px black;
+        background-color: #F2798F ;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo titulo titulo titulo"
+        "uno dos tres cuatro cinco"
+        "seis siete ocho nueve diez"
+        "once doce trece catorce quince"
+        /* "dieciseis diecisiete dieciocho diecinueve veinte"
+        "veintiuno veintidos veintitres veinticuatro veinticinco" */
+        ;
+    }
+    .main__sectionG--cap:hover{
+        border: solid 2px red;
+    }
+
+    .m_s_ves_5{
+        grid-area: cinco;
+        border: solid 1px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        background-color: #C6D99C;
+    }
+    .m_s_ves_25{
+        grid-area: veinticinco;
+        border: solid 1px black;
+
+    }
+
+
+    /* HISTORIA */
+    /* .mainHistoria__grid{
+        display: grid;
+        margin: 10px;
+        padding: 10px;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-rows: 1fr, 1fr, 1fr;
+        grid-template-areas: 
+        "texto imguno imguno"
+        "texto imguno imguno"
+        "texto texto texto"
+        ;
+
+
+    }
+    .historia__textoUno{
+        grid-area: texto;
+    }
+    .historia__imgUno{
+        grid-area: imguno;
+    } */
+
+/* CONTACTO CHICHES */
+.main__Contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .italian{
+        font-style: italic;
+    }
+    .tamañoLetraDiez{
+        font-size: 14px;
+    }
+    .contacto__formGrade{
+        background-color:#F2F0E4 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contacto__formDos{
+        margin: 8px;
+        padding: 5px;
+        background-color:#F2F0E4 ;
+        
+    }
+    /* .grid{
+        display: grid;
+    } */
+
+    /*ALL FOOTER*/
+    footer{    
+        /* position: absolute; */
+        padding: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #A61F2B;
+        color: #F2F0E4;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+
+    }
+    .footer__section{
+        font-style: normal;
+        display: inline-block;
+    }
+    .footer__sectionDos{
+        font-style: italic;
+        display: inline-block;
+        width: 180px;
+        height: 70px;
+        text-align: center;
+    }
+    .footer__botones--redes{
+        letter-spacing: 4px;
+        display: inline-block;
+        
+    }
+    .footer__CR{
+        word-spacing: 2px;
+        display: inline-block;
+    }
+
+
+@media only screen and (min-width:1024px){
+    .main{
+        background-color: yellow;
+    }
+
+}
+
+@media only screen and (min-width:360px){
+    /* mobile */
+    .main{
+        background-color: orange;
+    }
+
+
+
+}
+@media only screen and (min-width:768px){
+    /* tablet */
+    .body{
+        background-color: aqua;
+        
+    }
+
+}
